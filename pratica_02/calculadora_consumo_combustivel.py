@@ -17,4 +17,4 @@ consumo_medio = distancia_percorrida / combustivel_gasto  # em km/l
 print("Dados da Viagem:")
 print(f"Distância percorrida: {distancia_percorrida} km")
 print(f"Combustível gasto: {combustivel_gasto} litros")
-print(f"Consumo médio: {consumo_medio:.2f} km/l")  
+print(f"Consumo médio: {consumo_medio:.2f} km/l")
