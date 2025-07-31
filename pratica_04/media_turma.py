@@ -24,5 +24,4 @@ def registrar_notas():
         print(f"A média da turma é: {media:.2f}")
     else:
         print("Nenhuma nota válida foi registrada.")
-if __name__ == "__main__":
-    registrar_notas()
+registrar_notas()

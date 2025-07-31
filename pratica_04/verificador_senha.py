@@ -8,17 +8,13 @@ def verificar_senha(senha):
         return False
     return True
 
-def main():
-    while True:
-        senha = input("Digite uma senha ou 'sair' para encerrar: ")
-        if senha.lower() == 'sair':
-            print("Programa encerrado.")
-            break
-        if verificar_senha(senha):
-            print("Senha forte!")
-            break
-        else:
-            print("Senha fraca. Tente novamente.")
-
-if __name__ == "__main__":
-    main()
+while True:
+    senha = input("Digite uma senha (ou 'sair' para encerrar): ")
+    if senha.lower() == 'sair':
+        print("Programa encerrado.")
+        break
+    if verificar_senha(senha):
+        print("Senha forte!")
+        break
+    else:
+        print("Senha fraca. Tente novamente.")

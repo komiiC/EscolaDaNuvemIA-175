@@ -36,21 +36,18 @@ def calcular(num1, num2, operacao):
         return num1 / num2
     else:
         raise ValueError("Operação inválida. Use +, -, * ou /.")
-def main():
-    while True:
-        try:
-            num1 = float(input("Digite o primeiro número: "))
-            num2 = float(input("Digite o segundo número: "))
-            operacao = input("Digite a operação (+, -, *, /): ").strip()
-            
-            resultado = calcular(num1, num2, operacao)
-            print(f"O resultado de {num1} {operacao} {num2} é: {resultado}")
-            break  # Encerra o loop se a operação for bem-sucedida
-        except ValueError:
-            print(f"Utilize apenas números.")
-        except ZeroDivisionError:
-            print(f"Náo é possível dividir por zero.")
-        except Exception:
-            print(f"Tente novamente.")
-if __name__ == "__main__":
-    main()
+
+while True:
+    try:
+        num1 = float(input("Digite o primeiro número: "))
+        num2 = float(input("Digite o segundo número: "))
+        operacao = input("Digite a operação (+, -, *, /): ")
+        resultado = calcular(num1, num2, operacao)
+        print(f"O resultado de {num1} {operacao} {num2} é: {resultado:.2f}")
+        break
+    except ValueError as ve:
+        print(f"Erro: {ve}. Tente novamente.")
+    except ZeroDivisionError as zde:
+        print(f"Erro: {zde}. Tente novamente.")
+    except Exception as e:
+        print(f"Erro inesperado: {e}. Tente novamente.")
